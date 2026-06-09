@@ -35,3 +35,33 @@ completadas.
     listarTareasPendientes(); 
     listarTareasCompletadas();
 */
+
+
+const tareas = [
+    {
+        nombre: "Comprar leche",
+        estado: 'Completada'
+    },
+    {
+        nombre: "Estudiar JavaScript",
+        estado: 'Pendiente'
+    },
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
