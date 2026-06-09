@@ -42,7 +42,11 @@ const productosConstruccion =  productos.filter((producto)=>{
     return producto.categoria == "Construcción"
 })
 
-console.log(productosConstruccion);
+const nombresProductos = productosConstruccion.map((producto)=>{
+    return producto.nombre
+})
+
+console.log(nombresProductos);
 
 
 
