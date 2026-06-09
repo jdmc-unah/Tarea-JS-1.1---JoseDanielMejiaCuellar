@@ -19,3 +19,14 @@ consulta".
 6. Llama a la función y maneja el resultado con .then() y .catch().
 
 */
+
+
+const consultarBaseDeDatos = ()=>{
+    return new Promise((resolve, reject)=>{
+        
+    })
+} 
+
+
+
+
