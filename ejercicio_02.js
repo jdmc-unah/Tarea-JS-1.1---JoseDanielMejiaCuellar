@@ -23,7 +23,20 @@ consulta".
 
 const consultarBaseDeDatos = ()=>{
     return new Promise((resolve, reject)=>{
-        
+        setTimeout(() => {
+            //Generar numero aleatorio entre 0 y 10
+            const numeroAleatorio = Math.random() * 10
+
+            //Es par
+            if (numeroAleatorio % 2 == 0) {
+                resolve("Consulta exitosa")
+            }else{
+                reject( "Error en la consulta")
+            }
+
+        }, 3000);
+
+
     })
 } 
 
