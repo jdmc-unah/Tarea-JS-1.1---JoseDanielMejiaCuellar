@@ -46,8 +46,16 @@ const nombresProductos = productosConstruccion.map((producto)=>{
     return producto.nombre
 })
 
+const precioTotal = productosConstruccion.reduce((valorPrevio, valorActual)=>{
+    return valorPrevio += valorActual.precio
+},0)
+
+
+
+
 console.log(nombresProductos);
 
+console.log(precioTotal);
 
 
 
