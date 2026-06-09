@@ -38,6 +38,12 @@ const productos = [
 ];
 
 
+const productosConstruccion =  productos.filter((producto)=>{
+    return producto.categoria == "Construcción"
+})
+
+console.log(productosConstruccion);
+
 
 
 
