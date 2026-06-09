@@ -28,7 +28,7 @@ const consultarBaseDeDatos = ()=>{
             const numeroAleatorio = Math.random() * 10
 
             //Es par
-            if (numeroAleatorio % 2 == 0) {
+            if (Math.round(numeroAleatorio) % 2 == 0) {
                 resolve("Consulta exitosa")
             }else{
                 reject( "Error en la consulta")
@@ -36,10 +36,18 @@ const consultarBaseDeDatos = ()=>{
 
         }, 3000);
 
-
     })
 } 
 
 
+consultarBaseDeDatos()
 
+    .then((response)=>{
+        console.log(response);
+        
+    })
+    
+    .catch((error)=>{
+        console.log(error)
+    })
 
