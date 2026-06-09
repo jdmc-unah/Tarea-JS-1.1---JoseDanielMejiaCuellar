@@ -71,9 +71,24 @@ const agregarTarea = (descripcion)=>{
 }
 
 
+const marcarTareaComoCompletada = (descTareaCompletada)=>{
+    
+    const indice = tareas.findIndex((tarea)=>{
+       return tarea.descripcion === descTareaCompletada
+    })
+
+    console.log(indice);
+    
+    if (indice >= 0) {
+        tareas[indice].completada = true    
+    }
+
+}   
+
+
 agregarTarea("Comprar pasta de dientes")
 
-
+marcarTareaComoCompletada("Comprar pasta de dientes")
 
 console.log(tareas)
 
