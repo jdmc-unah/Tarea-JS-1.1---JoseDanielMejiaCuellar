@@ -37,6 +37,7 @@ completadas.
 */
 
 
+
 const tareas = [
     {
         descripcion: "Comprar leche",
@@ -51,7 +52,30 @@ const tareas = [
 
 
 
+const agregarTarea = (descripcion)=>{
+    try {
+        tareas.push(
+            {
+                descripcion: descripcion,
+                completada: false
+            }
+        )
 
+        console.log(`\nLa tarea "${descripcion}" ha sido agregada\n`);
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+
+}
+
+
+agregarTarea("Comprar pasta de dientes")
+
+
+
+console.log(tareas)
 
 
 
