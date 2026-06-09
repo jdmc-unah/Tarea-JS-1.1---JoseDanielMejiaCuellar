@@ -52,10 +52,12 @@ const precioTotal = productosConstruccion.reduce((valorPrevio, valorActual)=>{
 
 
 
+console.log(`Productos de construcción`);
+nombresProductos.forEach(producto => {
+    console.log(`- ${producto}`);
+});
 
-console.log(nombresProductos);
-
-console.log(precioTotal);
+console.log(`\nTotal: L.${precioTotal}`);
 
 
 
