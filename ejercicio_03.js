@@ -15,4 +15,39 @@ para manejar la promesa devuelta por consultarBaseDeDatos().
 
 
 
+const consultarBaseDeDatos = ()=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            //Generar numero aleatorio entre 0 y 10
+            const numeroAleatorio = Math.random() * 10
+
+            //Es par
+            if (Math.round(numeroAleatorio) % 2 == 0) {
+                resolve("Consulta exitosa")
+            }else{
+                reject( "Error en la consulta")
+            }
+
+        }, 3000);
+
+    })
+} 
+
+
+
+const ejecutarConsulta = async ()=>{
+    try {
+        const response = await consultarBaseDeDatos()
+
+        console.log(response);
+        
+    } catch (error) {
+        console.log(error)
+        
+    }
+}
+
+
+ejecutarConsulta()
+
 
