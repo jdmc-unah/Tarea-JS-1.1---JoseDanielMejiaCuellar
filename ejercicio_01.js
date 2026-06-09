@@ -30,15 +30,15 @@ fetch('https://jsonplaceholder.typicode.com/users')
     })
     
     .then((users)=> {
-        
+
         users.forEach(user => {
-            console.log(`Nombre: ${user.name}`);
-            console.log(`Correo: ${user.email}`);
+            console.log(`Nombre: ${user.name}, Email: ${user.email} \n`);
         });
 
     })
+
     .catch((error) => {
-        console.log(error);
+        console.log(`ERROR: ${error}`);
         
     })
 
