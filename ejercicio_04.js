@@ -29,6 +29,15 @@ const productos = [
 */
 
 
+const productos = [ 
+{ nombre: "Bolsa de Cemento", precio: 200, categoria: "Construcción" }, 
+{ nombre: "Llave Inglesa", precio: 1500, categoria: "Herramientas" }, 
+{ nombre: "Bloque de Concreto", precio: 25, categoria: "Construcción" }, 
+{ nombre: "Taladro Truper", precio: 1200, categoria: "Herramientas" }, 
+{ nombre: "Espuma Expansiva Lanco", precio: 160, categoria: "Construcción" } 
+];
+
+
 
 
 
