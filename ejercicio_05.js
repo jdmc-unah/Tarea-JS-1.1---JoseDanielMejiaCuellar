@@ -39,12 +39,12 @@ completadas.
 
 const tareas = [
     {
-        nombre: "Comprar leche",
-        estado: 'Completada'
+        descripcion: "Comprar leche",
+        completada: true
     },
     {
-        nombre: "Estudiar JavaScript",
-        estado: 'Pendiente'
+        descripcion: "Estudiar JavaScript",
+        completada: false
     },
 ]
 
