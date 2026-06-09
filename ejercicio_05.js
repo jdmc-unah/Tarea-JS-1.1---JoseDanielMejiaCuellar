@@ -40,11 +40,11 @@ completadas.
 
 const tareas = [
     {
-        descripcion: "Comprar leche",
+        descripcion: "Comprar pasta de dientes",
         completada: true
     },
     {
-        descripcion: "Estudiar JavaScript",
+        descripcion: "Hacer ejercicio",
         completada: false
     },
 ]
@@ -61,7 +61,7 @@ const agregarTarea = (descripcion)=>{
             }
         )
 
-        console.log(`\nLa tarea "${descripcion}" ha sido agregada\n`);
+        console.log(`La tarea "${descripcion}" ha sido agregada`);
         
     } catch (error) {
         console.log(error);
@@ -76,8 +76,6 @@ const marcarTareaComoCompletada = (descTareaCompletada)=>{
     const indice = tareas.findIndex((tarea)=>{
        return tarea.descripcion === descTareaCompletada
     })
-
-    console.log(indice);
     
     if (indice >= 0) {
         tareas[indice].completada = true    
@@ -86,12 +84,50 @@ const marcarTareaComoCompletada = (descTareaCompletada)=>{
 }   
 
 
-agregarTarea("Comprar pasta de dientes")
+const listarTareasPendientes = ()=>{
+    const tareasPendientes = tareas.filter((tarea)=>{
+        return !tarea.completada
+    })
 
-marcarTareaComoCompletada("Comprar pasta de dientes")
+    if (tareasPendientes.length >0 ) {
+        console.log('\nTAREAS PENDIENTES');
+            
+        tareasPendientes.forEach( (tarea) => {
+            console.log(` - ${tarea.descripcion}`);    
+        });        
+    }
+}
 
-console.log(tareas)
+const listarTareasCompletadas = ()=>{
+    const tareasPendientes = tareas.filter((tarea)=>{
+        return tarea.completada
+    })
 
+    if (tareasPendientes.length >0 ) {
+        console.log('\nTAREAS COMPLETADAS');
+            
+        tareasPendientes.forEach( (tarea) => {
+            console.log(` - ${tarea.descripcion}`);    
+        });        
+    }
+}
+
+
+
+
+//*Agregar tareas 
+    agregarTarea("Comprar leche"); 
+    agregarTarea("Llamar al médico"); 
+    agregarTarea("Estudiar JavaScript"); 
+
+//*Marcar tareas como completadas 
+    marcarTareaComoCompletada("Comprar leche"); 
+
+//*Listar tareas 
+    listarTareasPendientes(); 
+    listarTareasCompletadas();
+
+    
 
 
 
